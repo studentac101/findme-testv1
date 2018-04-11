@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::post('/doLogin','LoginLogoutController@doLogin');
 Route::get('/doLogout','LoginLogoutController@doLogout');
 
+Route::post('/search','MobileController@search');
+
 
 
   // NOTE : middlewares will execute first then it will proceed to the request
