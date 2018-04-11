@@ -29,7 +29,7 @@ class OfficerController extends Controller
     {
   $ip =  $_SERVER['REMOTE_ADDR'];
        echo "<script>console.log( 'Debug Objects: " . $ip . "' );</script>";
-      $missings = Incident::with(['missing','officer','station'])->get();
+      $missings = Incident::with(['incident','missing','officer.station','station'])->get();
       // dd($missings[0]->petitioner->first_name);
       return view('officer.officer_homepage',['missings'=>$missings]);
     }
