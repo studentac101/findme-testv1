@@ -10,7 +10,7 @@ class MobileController extends Controller
   {
 
     $name="J";
-    $missing = Missing::where('first_name',$name)->orWhere('last_name',$name)->get();
-    dd($missing);
+    $missings = Missings::where('name', 'like', $name)->get();
+    dd($missings);
   }
 }
