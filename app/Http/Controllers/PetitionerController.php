@@ -77,7 +77,7 @@ class PetitionerController extends Controller
      */
     public function show()
     {
-        $station = Officer::find(Auth::guard('officer')->user()->id)->station;
+        $station = Station::find(Auth::guard('officer')->user()->station_id);
         $petitioners = Petitioner::get();
         return view('petitioner.petitioner_showall',['station'=>$station->name,'petitioners'=>$petitioners]);
     }
