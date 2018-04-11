@@ -162,8 +162,6 @@ class PetitionerController extends Controller
         Session::flash('updated','Profile was successfully updated!');
         return redirect()->back();
 
-
-
     }
 
     public function activation($id)
