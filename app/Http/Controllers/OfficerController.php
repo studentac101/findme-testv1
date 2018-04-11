@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Officer;
+use App\Station;
 use App\Incident;
 use Auth;
 use Image;
@@ -27,8 +28,6 @@ class OfficerController extends Controller
      */
     public function index()
     {
-  $ip =  $_SERVER['REMOTE_ADDR'];
-       echo "<script>console.log( 'Debug Objects: " . $ip . "' );</script>";
       $missings = Incident::with(['incident','missing','officer.station','station'])->get();
       // dd($missings[0]->petitioner->first_name);
       return view('officer.officer_homepage',['missings'=>$missings]);
@@ -140,7 +139,7 @@ class OfficerController extends Controller
         //show all officers in the station where the current user is loggedin & and it will exclude itself from the results
         //order by their last name
         $officers = Officer::where('station_id',Auth::guard('officer')->user()->station_id)->where('id','!=',Auth::guard('officer')->user()->id)->with(['station'])->orderBy('last_name')->get();
-        $station = Officer::find(Auth::guard('officer')->user()->id)->station->name;
+        $station = Station::find(Auth::guard('officer')->user()->station_id);
         return view('officer.officer_showall',['officers'=>$officers,'station'=>$station]);
     }
 

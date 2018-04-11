@@ -107,6 +107,17 @@ class PetitionerController extends Controller
       return view('petitioner.petitioner_editprofile',['petitioner'=>$petitioner]);
     }
 
+
+    public function activation($id)
+    {
+        $petitioner = Petitioner::find($id);
+        // check if the petitioner is active or not
+
+        $petitioner->status? $petitioner->status= 0: $petitioner->status = 1;
+        $petitioner->save();
+        return redirect()->back();
+
+    }
     /**
      * Update the specified resource in storage.
      *

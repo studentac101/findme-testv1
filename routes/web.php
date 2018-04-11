@@ -56,6 +56,7 @@ Route::get('/doLogout','LoginLogoutController@doLogout');
       Route::get('/showallReports/{id}','PetitionerController@showallReports'); //this will show all the reports made by the petitioner - link
       // id in the link is id of the petitioner
       Route::get('/editPetitioner/{id}','PetitionerController@edit');
+      Route::post('/activation/{id}','PetitionerController@activation');
     });
 
 
