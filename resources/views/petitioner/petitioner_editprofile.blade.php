@@ -1,24 +1,30 @@
 @extends('app.template')
 @section('content')
-
+@if (session('updated'))
+<div class="col-xs-12">
+  <div class="alert alert-success">
+      {{ session('updated') }}
+  </div>
+</div>
+@endif
 <div class="col-xs-4">
   <div class="box">
     <div class="box-header">
       <h3 class="box-title">Petitioner Details</h3>
     </div>
     <div class="box-body">
-      {{ Form::bsText(null,'Username',$petitioner->username,['readonly']) }}
-      {{ Form::bsText(null,"Petitioner's Name",$petitioner->first_name.' '.$petitioner->middle_name.''.$petitioner->last_name ,['readonly']) }}
-      {{ Form::bsText(null,'Gender',$petitioner->gender,['readonly']) }}
-      {{ Form::bsText(null,'Date of Birth',$petitioner->birthdate,['readonly']) }}
-      {{ Form::bsText(null,'Nationality',$petitioner->nationality,['readonly']) }}
-      {{ Form::bsText(null,'Address',$petitioner->address,['readonly']) }}
-      {{ Form::bsText(null,'Contact No.',$petitioner->contact_no,['readonly']) }}
-      {{ Form::bsText(null,'Email',$petitioner->email,['readonly']) }}
-      {{ Form::bsText(null,'Status',$petitioner->flag ? "Active" : "Deactivated",['readonly']) }}
+      {{ Form::bsText('unknown','Username',$petitioner->username,['readonly']) }}
+      {{ Form::bsText('unknown',"Petitioner's Name",$petitioner->first_name.' '.$petitioner->middle_name.''.$petitioner->last_name ,['readonly']) }}
+      {{ Form::bsText('unknown','Gender',$petitioner->gender,['readonly']) }}
+      {{ Form::bsText('unknown','Date of Birth',$petitioner->birthdate,['readonly']) }}
+      {{ Form::bsText('unknown','Nationality',$petitioner->nationality,['readonly']) }}
+      {{ Form::bsText('unknown','Address',$petitioner->address,['readonly']) }}
+      {{ Form::bsText('unknown','Contact No.',$petitioner->contact_no,['readonly']) }}
+      {{ Form::bsText('unknown','Email',$petitioner->email,['readonly']) }}
+      {{ Form::bsText('unknown','Status',$petitioner->flag ? "Active" : "Deactivated",['readonly']) }}
 
       <div class="row">
-        <form action="" method="post">
+        <form action="{{url('petitioners/activation/'.$petitioner->id)}}" method="post">
           {{csrf_field()}}
           <div class="col-xs-6">
             <button type="submit" class="btn btn-danger btn-block">{{$petitioner->flag? "Deactivate" : "Activate"}}</button>
@@ -42,7 +48,7 @@
     </div>
 
     <div class="box-body">
-      <form action="#" method="post">
+      <form action="{{url('petitioners/updatePetitioner/'.$petitioner->id)}}" method="post">
         {{csrf_field()}}
         <div class="row">
           <div class="col-xs-3">

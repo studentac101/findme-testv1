@@ -236,7 +236,7 @@ desired effect
 <!-- googlejs -->
 <script src="{{asset('js/googlemap.js')}}"></script>
 <!-- Google Maps Api -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0uPOI3KKcH9vi9W1VjZBvTQQj2SyTxZs&libraries=places&callback=initAutocomplete&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvt6fum8rSGYtIb76xAfu0YSmuCykHDaA&libraries=places&callback=initAutocomplete&callback=initMap"
     async defer></script>
 
 <!-- page script -->

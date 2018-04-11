@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Officer;
-use App\Station;
 use App\Incident;
 use Auth;
 use Image;
@@ -28,6 +27,8 @@ class OfficerController extends Controller
      */
     public function index()
     {
+  $ip =  $_SERVER['REMOTE_ADDR'];
+       echo "<script>console.log( 'Debug Objects: " . $ip . "' );</script>";
       $missings = Incident::with(['incident','missing','officer.station','station'])->get();
       // dd($missings[0]->petitioner->first_name);
       return view('officer.officer_homepage',['missings'=>$missings]);
@@ -139,7 +140,7 @@ class OfficerController extends Controller
         //show all officers in the station where the current user is loggedin & and it will exclude itself from the results
         //order by their last name
         $officers = Officer::where('station_id',Auth::guard('officer')->user()->station_id)->where('id','!=',Auth::guard('officer')->user()->id)->with(['station'])->orderBy('last_name')->get();
-        $station = Station::find(Auth::guard('officer')->user()->station_id);
+        $station = Officer::find(Auth::guard('officer')->user()->id)->station->name;
         return view('officer.officer_showall',['officers'=>$officers,'station'=>$station]);
     }
 
@@ -184,21 +185,29 @@ class OfficerController extends Controller
         if($changedUsername){
             $this->validate($request,[
               "username" => "required|unique:officers",
+              "first_name" => "required",
+              "middle_name" => "required",
+              "last_name" => "required",
+              "gender" => "required",
+              "nationality" => "required",
+              "birthdate" => "required",
+              "contact_no" => "required",
+              "email" => "required|email",
             ]);
-            $officer->username = $request->username;
         }
-
-        $this->validate($request,[
-          "username" => "required",
-          "first_name" => "required",
-          "middle_name" => "required",
-          "last_name" => "required",
-          "gender" => "required",
-          "nationality" => "required",
-          "birthdate" => "required",
-          "contact_no" => "required",
-          "email" => "required|email",
-        ]);
+        else {
+          $this->validate($request,[
+            "username" => "required",
+            "first_name" => "required",
+            "middle_name" => "required",
+            "last_name" => "required",
+            "gender" => "required",
+            "nationality" => "required",
+            "birthdate" => "required",
+            "contact_no" => "required",
+            "email" => "required|email",
+          ]);
+        }
         $officer->username = $request->username;
         $officer->first_name = $request->first_name;
         $officer->middle_name = $request->middle_name;
