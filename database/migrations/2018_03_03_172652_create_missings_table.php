@@ -15,7 +15,7 @@ class CreateMissingsTable extends Migration
     {
         Schema::create('missings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('avatar');
+            $table->string('avatar')->default('default.png');
             $table->string('imgurl');
             $table->string('first_name');
             $table->string('middle_name');
