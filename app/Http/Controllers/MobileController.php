@@ -6,15 +6,11 @@ use Illuminate\Http\Request;
 use App\Missing;
 class MobileController extends Controller
 {
-  public function search()
+  public function search(Request $request)
   {
-    $query="J";
-    $missings = Missing::where("first_name", "like","%{$query}%")->get();
-    echo json_encode($missings);
-    echo "<br>";
-    echo "<hr>";
-    echo "<br>";
-    echo $missings;
 
+    $missings = Missing::where("first_name", "like","%{$request->query}%")->get();
+    echo $missings;
+    exit();
   }
 }
