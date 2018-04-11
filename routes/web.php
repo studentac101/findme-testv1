@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::post('/doLogin','LoginLogoutController@doLogin');
 Route::get('/doLogout','LoginLogoutController@doLogout');
 
-Route::get('/search','MobileController@search');
+Route::post('/search','MobileController@search');
 
 
 
