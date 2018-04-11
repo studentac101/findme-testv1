@@ -8,7 +8,7 @@ class MobileController extends Controller
 {
   public function search()
   {
-    $serach="J";
+    $search="J";
     $missings = Missing::where("first_name", "like","%{$search}%")->get();
     dd($missings);
   }
