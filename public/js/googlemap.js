@@ -11,7 +11,7 @@ url = url.slice(0, -1)
 
 
 
-if( url == "http://206.189.35.125/missings/editMissing/"){
+if( url == "http://206.189.35.125/missings/editMissing/" || url == "http://phplaravel-166083-479984.cloudwaysapps.com/missings/editMissing/"){
   var temp_lat = parseFloat($("#lat").val());
   var temp_lng = parseFloat($("#lng").val());
   var Missing = {lat: temp_lat  , lng: temp_lng}; //used for editing missing person
@@ -144,7 +144,7 @@ if( url == "http://206.189.35.125/missings/editMissing/"){
 
 
 
-else if(url == 'http://206.189.35.125/missings/createMissing/') {
+else if(url == 'http://206.189.35.125/missings/createMissing/' || url == 'http://phplaravel-166083-479984.cloudwaysapps.com/missings/createMissing/') {
   // ------------------------------------------------------------------
   var Cebu = {lat : 10.3157 , lng : 123.8854};  //used for creating a new missing person
   function initMap() {// map for creation of a missing person record
@@ -271,7 +271,7 @@ else if(url == 'http://206.189.35.125/missings/createMissing/') {
 
 } //else if
 
-else if(url == 'http://206.189.35.125/sightings/detail/') {
+else if(url == 'http://206.189.35.125/sightings/detail/' || url == 'http://phplaravel-166083-479984.cloudwaysapps.com/sightings/detail/') {
   var temp_lat = parseFloat($("#lat").val());
   var temp_lng = parseFloat($("#lng").val());
   var Sighting = {lat: temp_lat  , lng: temp_lng}; //used for viewing the sighting of a missing person
