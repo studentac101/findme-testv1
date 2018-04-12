@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Google Maps Api -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete&initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete&callback=initMap"
           async defer></script>
 </head>
 <!--
