@@ -49,7 +49,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <input type="submit" class="btn btn-success btn-block" value="Submit">
+            <input type="submit" onclick="activation(event)" class="btn btn-success btn-block" value="Submit">
           </div>
         </div>
       </form>

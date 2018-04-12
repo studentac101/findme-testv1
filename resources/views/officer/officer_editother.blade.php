@@ -74,13 +74,13 @@
   <form action="{{url('/officers/activation/'.$officer->id)}}" method="post">
     {{csrf_field()}}
       <div class="col-xs-6">
-        <button type="submit" class="btn btn-primary btn-block">{{$officer->status? "Deactivate" : "Reactivate"}}</button>
+        <button type="submit" onclick="activation(event)" class="btn btn-primary btn-block">{{$officer->status? "Deactivate" : "Reactivate"}}</button>
       </div>
   </form>
   <form action="{{url('/officers/resetpassword/'.$officer->id)}}" method="post">
     {{csrf_field()}}
       <div class="col-xs-6">
-        <button type="submit" class="btn btn-danger btn-block">Reset Password</button>
+        <button type="submit" onclick="activation(event)" class="btn btn-danger btn-block">Reset Password</button>
       </div>
   </form>
 </div>
@@ -188,7 +188,7 @@
           </div>
         </div> <!-- 4th row -->
 
-        <button type="submit" class="btn btn-success btn-block" name="button">Update Officer Info</button>
+        <button type="submit" onclick="activation(event)" class="btn btn-success btn-block" name="button">Update Officer Info</button>
 
       </form>
 

@@ -26,14 +26,14 @@
 
                     <form action="{{url('sightings/accept/'.$sighting->id)}}" method="post">
                       {{csrf_field()}}
-                      <button href="" class="btn btn-md btn-success btn-block">Accept</button>
+                      <button href="" onclick="activation(event)" class="btn btn-md btn-success btn-block">Accept</button>
                     </form>
 
                     <!-- --------------------------------------------------- -->
 
                     <form action="{{url('sightings/decline/'.$sighting->id)}}" method="post">
                       {{csrf_field()}}
-                      <button href="" class="btn btn-md btn-danger btn-block">Decline</button>
+                      <button href="" onclick="activation(event)" class="btn btn-md btn-danger btn-block">Decline</button>
                     </form>
 
                     <!-- --------------------------------------------------- -->

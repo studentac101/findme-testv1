@@ -27,13 +27,13 @@
         <form action="{{url('petitioners/activation/'.$petitioner->id)}}" method="post">
           {{csrf_field()}}
           <div class="col-xs-6">
-            <button type="submit" class="btn btn-danger btn-block">{{$petitioner->flag? "Deactivate" : "Activate"}}</button>
+            <button type="submit" onclick="activation(event)" class="btn btn-danger btn-block">{{$petitioner->flag? "Deactivate" : "Activate"}}</button>
           </div>
         </form>
         <form action="" method="post">
           {{csrf_field()}}
           <div class="col-xs-6">
-            <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
+            <button type="submit" onclick="activation(event)" class="btn btn-primary btn-block">Reset Password</button>
           </div>
         </form>
       </div>
@@ -91,7 +91,7 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <button type="submit" class="btn btn-block btn-success">Update details</button>
+            <button type="submit" onclick="activation(event)" class="btn btn-block btn-success">Update details</button>
           </div>
         </div>
       </form>

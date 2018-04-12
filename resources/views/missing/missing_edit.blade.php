@@ -26,7 +26,7 @@
       </form>
 
         <br>
-        
+
       <form class="" action="" method="post">
         {{csrf_field()}}
 
@@ -105,7 +105,7 @@
           </div>
         </div>
 
-        <button type="submit" name="button" class="btn btn-success pull-right">Update</button>
+        <button type="submit" name="button" onclick="activation(event)" class="btn btn-success pull-right">Update</button>
 
       </form>
 

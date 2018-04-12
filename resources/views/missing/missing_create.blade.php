@@ -24,7 +24,7 @@
             {{Form::bsFile('avatar','Upload Image',null,['required'])}}
           </div>
         </div>
-        
+
 
         <div class="row">
           <div class="col-xs-4">
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <button type="submit" name="button" class="btn btn-success pull-right">Create</button>
+        <button type="submit" name="button" onclick="activation(event)" class="btn btn-success pull-right">Create</button>
 
       </form>
 

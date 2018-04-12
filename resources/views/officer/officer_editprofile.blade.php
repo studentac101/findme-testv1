@@ -85,7 +85,7 @@
                   {{Form::bsText('email','Email',Auth::guard('officer')->user()->email,['placeholder'=>'Email Address'])}}
                 </div>
               </div> <!-- 3rd row -->
-            <button type="submit" class="btn btn-info" name="button">Update Profile</button>
+            <button type="submit" onclick="activation(event)" class="btn btn-info" name="button">Update Profile</button>
         </form>
       </div>
     </div>
@@ -109,7 +109,7 @@
           {{Form::bsPassword('old_password','Old Password',['placeholder'=>'Old Password'])}}
           {{Form::bsPassword('password','New Password',['placeholder'=>'New Password'])}}
           {{Form::bsPassword('password_confirmation','Confirm Password',['placeholder'=>'Confirm Password'])}}
-          <button type="submit" class="btn btn-success" name="button">Update Password</button>
+          <button type="submit" onclick="activation(event)" class="btn btn-success" name="button">Update Password</button>
         </form>
       </div>
     </div>

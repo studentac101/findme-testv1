@@ -125,7 +125,7 @@
             {{Form::bsPassword('password_confirmation','Confirm Password',['placeholder'=>'Confirm Password'])}}
           </div>
         </div>  <!-- 5th row -->
-        <button type="submit" class="btn btn-info" name="button">Register Officer</button>
+        <button type="submit" onclick="activation(event)" class="btn btn-info" name="button">Register Officer</button>
 
       </form>
     </div>

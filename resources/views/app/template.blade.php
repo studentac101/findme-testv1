@@ -260,6 +260,18 @@ $(document).ready(function() {
     'info'        : true,
     'autoWidth'   : true
   });
+
+   function activation(e){
+
+	    var answer= confirm("Are you sure you want to proceed?");
+		if(answer){
+
+		}else{
+			e.preventDefault();
+			return false;
+		}
+ }
+
 });
 
 </script>
