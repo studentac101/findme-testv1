@@ -1,12 +1,9 @@
 
 
-var temp_lat = parseFloat($("#lat").val());
-var temp_lng = parseFloat($("#lng").val());
 
 
-var Cebu = {lat : 10.3157 , lng : 123.8854};  //used for creating a new missing person
-var Missing = {lat: temp_lat  , lng: temp_lng}; //used for editing missing person
-var Sighting = {lat: temp_lat  , lng: temp_lng}; //used for viewing the sighting of a missing person
+
+
 
 var url = window.location.href;
 // remove the last character
@@ -15,7 +12,9 @@ url = url.slice(0, -1)
 
 
 if( url == "http://206.189.35.125/missings/editMissing/"){
-
+  var temp_lat = parseFloat($("#lat").val());
+  var temp_lng = parseFloat($("#lng").val());
+  var Missing = {lat: temp_lat  , lng: temp_lng}; //used for editing missing person
   function  initMap(){// map for editing of missing person record
 
     var map = new google.maps.Map(document.getElementById('mapEditMissing'),{
@@ -147,6 +146,7 @@ if( url == "http://206.189.35.125/missings/editMissing/"){
 
 else if(url == 'http://206.189.35.125/missings/createMissing/') {
   // ------------------------------------------------------------------
+  var Cebu = {lat : 10.3157 , lng : 123.8854};  //used for creating a new missing person
   function initMap() {// map for creation of a missing person record
     var map = new google.maps.Map(document.getElementById('mapCreateMissing'), {
       center: Cebu,
@@ -272,6 +272,9 @@ else if(url == 'http://206.189.35.125/missings/createMissing/') {
 } //else if
 
 else if(url == 'http://206.189.35.125/sightings/detail/') {
+  var temp_lat = parseFloat($("#lat").val());
+  var temp_lng = parseFloat($("#lng").val());
+  var Sighting = {lat: temp_lat  , lng: temp_lng}; //used for viewing the sighting of a missing person
   function initMap() {
     var map = new google.maps.Map(document.getElementById('mapSightingDetail'),{
       center: Sighting,
