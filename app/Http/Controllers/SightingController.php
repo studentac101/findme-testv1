@@ -90,13 +90,7 @@ class SightingController extends Controller
                   	}
 
 
-                    $servername = "localhost";
-                    $username = "pftkgwykbk";
-                    $password = "PTmfa3paTg";
-                    $dbname = "pftkgwykbk";
-
-                      // Create connection
-                  $conn = new mysqli($servername, $username, $password,$dbname);
+                  $conn = mysqli_connect("localhost","pftkgwykbk","PTmfa3paTg","pftkgwykbk");
                   $conn->set_charset("utf8");
                   $sql = " Select token FROM petitioners WHERE id='$petitioner_id'";
                   $result = mysqli_query($conn,$sql);
