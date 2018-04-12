@@ -24,7 +24,7 @@
         <td>{{$missing->missing->first_name}} {{$missing->missing->middle_name}} {{$missing->missing->last_name}}</td>
         <td>{{$missing->petitioner->first_name}} {{$missing->petitioner->middle_name}} {{$missing->petitioner->last_name}}</td>
         <td>{{$missing->station->name}}</td>
-        <td>{{$missing->officer->first_name}} {{$missing->officer->first_name}} {{$missing->officer->last_name}} of {{$missing->station->name}}</td>
+        <td>{{$missing->officer->first_name}} {{$missing->officer->middle_name}} {{$missing->officer->last_name}} of {{$missing->station->name}}</td>
         <td>{{ ($missing->status)? "Missing":"Found" }}</td>
         <td><a href="" class="btn btn-block btn-default" name="button">View Details</a></td>
       </tr>

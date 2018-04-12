@@ -10,10 +10,10 @@ class Station extends Model
   {
     return $this->hasMany('App\Officer');
   }
-  public function petitioners()
-  {
-    return $this->hasMany('App\Petitioner');
-  }
+  // public function petitioners()
+  // {
+  //   return $this->hasMany('App\Petitioner');
+  // }
   public function incidents()
   {
     return $this->hasMany('App\Incident');

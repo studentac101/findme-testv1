@@ -17,7 +17,7 @@ class CreatePetitionersTable extends Migration
     {
         Schema::create('petitioners', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('station_id');
+            // $table->integer('station_id');
             $table->string('username');
             $table->string('password')->default(md5('default'));
             $table->string('first_name');
