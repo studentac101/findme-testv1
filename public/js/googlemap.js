@@ -14,7 +14,7 @@ url = url.slice(0, -1)
 
 
 
-if( url == "http://localhost:8000/missings/editMissing/"){
+if( url == "http://phplaravel-166083-479984.cloudwaysapps.com/missings/editMissing/"){
 
   function  initMap(){// map for editing of missing person record
 
@@ -145,7 +145,7 @@ if( url == "http://localhost:8000/missings/editMissing/"){
 
 
 
-else if(url == 'http://localhost:8000/missings/createMissing/') {
+else if(url == 'http://phplaravel-166083-479984.cloudwaysapps.com/missings/createMissing/') {
   // ------------------------------------------------------------------
   function initMap() {// map for creation of a missing person record
     var map = new google.maps.Map(document.getElementById('mapCreateMissing'), {
