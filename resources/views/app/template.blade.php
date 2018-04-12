@@ -44,6 +44,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+  <!-- Google Maps Api -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete&initMap"
+          async defer></script>
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -234,10 +238,6 @@ desired effect
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('assets/dist/js/demo.js')}}"></script>
 
-<!-- Google Maps Api -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5RVsPAOaJGelQhiTcniziVooGdX_7G54&libraries=places&callback=initAutocomplete&callback=initMap" async defer></script> -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete"
-        async defer></script>
 <!-- googlejs -->
 <script src="{{asset('js/googlemap.js')}}"></script>
 
