@@ -60,7 +60,9 @@ class MissingController extends Controller
         $image = Image::make($avatar)->resize(300,300)->save(public_path('uploads/missings/'.$filename));
         // save image in local directory
         Storage::disk('uploads')->put($filename,$image);
+        //used for db only not the actual saving of image
         $missing->imgurl = 'http://phpstack-166083-480072.cloudwaysapps.com/img/'.$filename;
+
         $missing->avatar = $filename;
       }
 

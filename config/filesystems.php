@@ -50,7 +50,7 @@ return [
 
         'uploads' => [
           'driver'=>'local',
-          'root'=>'C:\xampp\htdocs\findme\img',
+          'root'=>'http://phpstack-166083-480072.cloudwaysapps.com/img',
         ],
 
         'public' => [
