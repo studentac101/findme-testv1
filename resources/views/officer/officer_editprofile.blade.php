@@ -29,7 +29,7 @@
         <form class=""  enctype="multipart/form-data"  action="{{url('officers/updateAvatar')}}" method="post">
           {{csrf_field()}}
           <span style=" font-weight:bold" class="pull-left">Upload image &nbsp</span>
-           <button type="submit" name="button" class="btn btn-sm pull-right">Update Image</button>
+           <button type="submit" onclick="activation(event)" name="button" class="btn btn-sm pull-right">Update Image</button>
           <input type="file" name="avatar">
           <hr>
         </form>
