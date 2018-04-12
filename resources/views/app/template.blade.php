@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Find | Me</title>
   <!-- Tell the browser to be responsive to screen width -->
-  
+
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
@@ -237,7 +237,7 @@ desired effect
 <!-- googlejs -->
 <script src="{{asset('js/googlemap.js')}}"></script>
 <!-- Google Maps Api -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvt6fum8rSGYtIb76xAfu0YSmuCykHDaA&libraries=places&callback=initAutocomplete&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5RVsPAOaJGelQhiTcniziVooGdX_7G54&libraries=places&callback=initAutocomplete&callback=initMap"
     async defer></script>
 
 <!-- page script -->
