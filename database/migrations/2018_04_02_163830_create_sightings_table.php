@@ -20,7 +20,7 @@ class CreateSightingsTable extends Migration
             // this will be the file name saved in local directory
             $table->string('imgurl');
             // this will be the legit linkkkkkkkkk used to access an image for the android application
-            $table->string('image_url')->default('http://localhost/img/default.png');
+            $table->string('image_url')->default('http://phpstack-166083-480072.cloudwaysapps.com/img/default.png');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('middle_name');

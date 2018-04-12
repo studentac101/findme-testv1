@@ -51,7 +51,6 @@ Route::get('/doLogout','LoginLogoutController@doLogout');
       Route::get('/showallPetitioners','PetitionerController@show');
       Route::post('/updatePetitioner/{id}','PetitionerController@update');
       // id in the link is id of the petitioner
-       // *Checks if that missing person was reported in the station of the current authenticated user* - middleware
       Route::get('/showallReports/{id}','PetitionerController@showallReports'); //this will show all the reports made by the petitioner - link
       // id in the link is id of the petitioner
       Route::get('/editPetitioner/{id}','PetitionerController@edit');

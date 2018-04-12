@@ -48,7 +48,7 @@ class MissingController extends Controller
       $incident = new Incident();
 
       $petitioner = Petitioner::find($id);
-      
+
       if($request->hasFile('avatar')){
         $this->validate($request,['avatar'=>'image']);
 
@@ -60,7 +60,7 @@ class MissingController extends Controller
         $image = Image::make($avatar)->resize(300,300)->save(public_path('uploads/missings/'.$filename));
         // save image in local directory
         Storage::disk('uploads')->put($filename,$image);
-        $missing->imgurl = 'http://192.168.254.107/findme/img/'.$filename;
+        $missing->imgurl = 'http://phpstack-166083-480072.cloudwaysapps.com/img/'.$filename;
         $missing->avatar = $filename;
       }
 
