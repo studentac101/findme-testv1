@@ -12,7 +12,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Find | Me</title>
   <!-- Tell the browser to be responsive to screen width -->
-
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
@@ -43,7 +42,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
 
 </head>
 <!--
@@ -235,16 +233,11 @@ desired effect
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('assets/dist/js/demo.js')}}"></script>
 
-
-
-<!-- Google Maps Api -->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete&callback=initMap"
-        async defer></script>
 <!-- googlejs -->
 <script src="{{asset('js/googlemap.js')}}"></script>
-
-
+<!-- Google Maps Api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz9ncawXg6jJgEySJVPBF5ZrIbXzjEigk&libraries=places&callback=initAutocomplete&callback=initMap"
+    async defer></script>
 
 <!-- page script -->
 
