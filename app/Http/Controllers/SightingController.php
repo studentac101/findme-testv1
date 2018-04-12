@@ -89,7 +89,7 @@ class SightingController extends Controller
                          return $result;
                   	}
 
-
+                    $petitioner_id=1;
                   $conn = mysqli_connect("localhost","pftkgwykbk","PTmfa3paTg","pftkgwykbk");
                   $conn->set_charset("utf8");
                   $sql = " Select token FROM petitioners WHERE id='$petitioner_id'";
