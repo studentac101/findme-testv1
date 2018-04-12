@@ -138,8 +138,8 @@ class OfficerController extends Controller
         //show all officers in the station where the current user is loggedin & and it will exclude itself from the results
         //order by their last name
         $officers = Officer::where('station_id',Auth::guard('officer')->user()->station_id)->where('id','!=',Auth::guard('officer')->user()->id)->with(['station'])->orderBy('last_name')->get();
-        $station = Officer::find(Auth::guard('officer')->user()->id)->station->name;
-        return view('officer.officer_showall',['officers'=>$officers,'station'=>$station]);
+        $station = Station::find(Auth::guard('officer')->user()->station_id);
+        return view('officer.officer_showall',['officers'=>$officers,'station'=>$station->name]);
     }
 
     /**
