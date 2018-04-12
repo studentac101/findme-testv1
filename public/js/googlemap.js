@@ -271,7 +271,7 @@ else if(url == 'http://localhost:8000/missings/createMissing/') {
 
 } //else if
 
-else {
+else if(url == 'http://localhost:8000/sightings/detail/') {
   function initMap() {
     var map = new google.maps.Map(document.getElementById('mapSightingDetail'),{
       center: Sighting,
@@ -365,6 +365,10 @@ else {
     });
 
   }
+}
+
+else{
+  console.log("No Map in this page.");
 }
 
 
